@@ -26,11 +26,17 @@ public class Regras {
 	
 	public boolean haVencedor() {
 		
-		
-		
-		
-		
-		
+		for(int linhas = 0; linhas < 3; linhas++) {
+			
+			for(int colunas = 0; colunas < 3; colunas++) {
+
+				String valorAtual = obj.getTabuleiro(linhas, colunas);
+					
+				//System.out.println("valor atual: " + valorAtual);
+				
+			}		
+			
+		}
 		
 		
 		return false;
