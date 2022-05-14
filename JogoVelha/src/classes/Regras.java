@@ -4,9 +4,12 @@ import principal.RunTictactoe;
 
 public class Regras {
   
+	RunTictactoe obj = new RunTictactoe();
+	
 	
 	public void marcar(String numero) {
 		
+		// separando os algarismos, exemplo: 21 em dois e um
 		char charlinha = numero.charAt(0); 
 		char charcoluna = numero.charAt(1);  
 		
@@ -15,15 +18,26 @@ public class Regras {
 		int intlinha = Integer.parseInt(String.valueOf(charlinha));
 		int intcoluna = Integer.parseInt(String.valueOf(charcoluna));
 		
+		obj.getTabuleiro().setTabuleiro(intlinha, intcoluna); // atribuindo às posições do tabuleiro
 		
-		RunTictactoe obj = new RunTictactoe();
-		
-		obj.getTabuleiro().setTabuleiro(intlinha, intcoluna);
-		
-		
-		obj.getTabuleiro().mostrarTabuleiro();
 		
 	}
+	
+	
+	public boolean haVencedor() {
+		
+		
+		
+		
+		
+		
+		
+		
+		return false;
+	}
+	
+	
+	
 	
 	
 }
