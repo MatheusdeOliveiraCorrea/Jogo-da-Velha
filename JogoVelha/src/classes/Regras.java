@@ -5,7 +5,7 @@ import principal.RunTictactoe;
 public class Regras {
   
 	private RunTictactoe obj = new RunTictactoe();
-	private int mult = 1; 
+
 	
 	public void marcar(String numero) {
 		
@@ -45,8 +45,11 @@ public class Regras {
 	 */
 	public boolean haVencedor() {
 		
-		
-
+		// array pra salvar as posições
+		int posx[] = new int[9];
+		int indexx = 0; 
+	    int mult = 1;  // Salvar o produto dos elementos dos arrays das posições x e y
+	    
 		for(int linha = 0; linha < 3; linha++) {
 			
 			for(int coluna = 0; coluna < 3; coluna++) {
@@ -55,27 +58,29 @@ public class Regras {
 					
 				if (valorAtual.equals("  X    ")) {
 	
+					//pegar posição atual do loop e converter pra int 
 					String string_posicao = ""+ linha + coluna ; 
 					int int_posicao = Integer.parseInt(string_posicao); 
 					
-					mult = mult * int_posicao; 
-								
+			
+					posx[indexx] = int_posicao;
+					indexx++;
 								
 				}
 				
 				
+				/* 
 				if(valorAtual.equals("  O    ")) {
 					
-					
-					
-					
-					
 				}
-				
+				*/
 				
 			}// fim for ( coluna) 
 			
 		}// fim for ( linha ) 
+		
+		
+		
 		
 		
 		if(mult == 528) {		
