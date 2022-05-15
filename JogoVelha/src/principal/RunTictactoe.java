@@ -35,10 +35,13 @@ public class RunTictactoe {
 		int rodada = 1;
 		int vez = 1; 
 		
+		
+		
 		while (!regras.haVencedor()) { //enquanto não tiver vencedor
 
 			if (rodada > 9) {  
 				System.out.println("acabou");
+				regras.haVencedor();
 				break;
 			}
 
@@ -60,6 +63,11 @@ public class RunTictactoe {
 			} else {
 
 				System.out.println("Rodada " + rodada + " VEZ DO COMPUTADOR: ");
+				
+				//futuramente implementar método que jogue pelo computador aqui 
+				
+				tabuleiro.mostrarTabuleiro();
+				
 				vez++;
 			}
 

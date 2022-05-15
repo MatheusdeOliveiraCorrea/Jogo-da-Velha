@@ -19,11 +19,11 @@ public class Tabuleiro {
 	//preencher todas as casas do vetor com F<linhas><colunas>  
 	public void criarTabuleiro() { 
 
-		for (int linhas = 0; linhas < 3; linhas++) {
+		for (int linha = 0; linha < 3; linha++) {
 
-			for (int colunas = 0; colunas < 3; colunas++) {
+			for (int coluna = 0; coluna < 3; coluna++) {
 
-				matrizTabuleiro[linhas][colunas] = " -" + linhas + colunas + "-  "; // 00 01 02 ...
+				matrizTabuleiro[linha][coluna] = " -" + linha + coluna + "-  "; // 00 01 02 ...
 
 			}
 
@@ -39,14 +39,14 @@ public class Tabuleiro {
  */
 	public void mostrarTabuleiro() {
 
-		for (int linhas = 0; linhas < 3; linhas++) {
+		for (int linha = 0; linha < 3; linha++) {
 
-			for (int colunas = 0; colunas < 3; colunas++) {
-				System.out.print(matrizTabuleiro[linhas][colunas]);
+			for (int coluna = 0; coluna < 3; coluna++) {
+				System.out.print(matrizTabuleiro[linha][coluna]);
 				
 					//pular linha quando chegar no terceiro elemento, ou seja, quando a coluna for 2.
 					//formando assim um quadrado que será nosso tabuleiro 
-					if (colunas == 2) { 
+					if (coluna == 2) { 
 						System.out.println("\n");
 					}
 
